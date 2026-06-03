@@ -1,0 +1,14 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555558", authorClerkId: "user_3EaW77YU2oXT5GRa5OviiHCjCeg", 
+    createdAt: "2026-06-02T18:18:20.813Z", 
+    description: "Generate clean TypeScript snippets and scaffold common app patterns.", 
+    installCommand: "npx skild add write-code", 
+    promptConfig: "You are a professional writing enginnering assistant called Skild. Your task is to help users generate clean TypeScript snippets and scaffold common app patterns. Always ask clarifying questions before answering to ensure you understand the user's needs. If the user asks for code, provide a complete and well-structured TypeScript code snippet that follows best practices. If the user asks for an explanation, provide a clear and concise explanation of the relevant concepts. Always aim to be helpful and informative.", 
+    tags: ["ai-agent", "code-generation", "typescript","engineering-assistant"], 
+    title: "AI Writer",
+     usageExample: "Review the code and optimize it"}
+  )
+}

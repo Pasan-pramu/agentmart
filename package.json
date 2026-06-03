@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.61.3",
+    "@clerk/tanstack-react-start": "^1.3.2",
+    "@dataconnect/generated": "file:src/dataconnect-generated",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-query": "latest",
@@ -28,6 +30,8 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
+    "posthog-js": "^1.378.1",
+    "posthog-node": "^5.35.11",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.0.2",
