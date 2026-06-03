@@ -1,259 +1,311 @@
-Welcome to your new TanStack Start app! 
+<div align="center">
+  <br />
+    <a href="#" target="_blank">
+      <img src="public/readme.webp" alt="Project Banner">
+    </a>
+  <br />
 
-# Getting Started
+  <div>
+    <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
+    <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
+    <img src="https://img.shields.io/badge/-TanStack_Start-000000?style=for-the-badge&logo=ReactRouter&logoColor=white" />
+    <img src="https://img.shields.io/badge/-TanStack_Query-FF4154?style=for-the-badge&logo=ReactQuery&logoColor=white" />
+    <br />
+    <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=black" />
+    <img src="https://img.shields.io/badge/-Data_Connect-FFCA28?style=for-the-badge&logo=Firebase&logoColor=black" />
+    <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Zod-3E67B1?style=for-the-badge&logo=Zod&logoColor=white" />
+    <br />
+    <img src="https://img.shields.io/badge/-Biome-60A5FA?style=for-the-badge&logo=Biome&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Authentication-7C3AED?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/-Server_Functions-000000?style=for-the-badge" />
+  </div>
 
-To run this application:
+  <h3 align="center">AgentMart | AI Agent Marketplace</h3>
+</div>
+
+## 📋 Table of Contents
+
+1. ✨ Introduction
+2. ⚙️ Tech Stack
+3. 🔋 Features
+4. 🏗 Architecture
+5. 🤸 Quick Start
+6. 🔐 Authentication
+7. 📚 Skill Marketplace
+8. 🚀 Publishing Skills
+9. 🔍 Search & Discovery
+10. 📂 Project Structure
+
+---
+
+## ✨ Introduction
+
+AgentMart is a modern full-stack AI Agent Marketplace built using TanStack Start and Firebase.
+
+The platform enables developers, creators, and AI enthusiasts to publish, discover, and manage reusable AI agent skills from a centralized registry.
+
+Users can browse skills, search by category or tags, publish new skills, save favorites, and manage their personal workspace through a type-safe, server-driven architecture powered by Firebase Data Connect and TanStack Start.
+
+---
+
+## ⚙️ Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* TanStack Start
+* TanStack Router
+* TanStack Query
+* Tailwind CSS
+
+### Backend
+
+* Firebase
+* Firebase Authentication
+* Firebase Data Connect
+* Cloud SQL PostgreSQL
+
+### Validation
+
+* Zod
+
+### Development Tools
+
+* Biome
+* Vite
+
+---
+
+## 🔋 Features
+
+👉 Authentication with Firebase
+
+👉 Protected Routes
+
+👉 AI Skill Publishing
+
+👉 AI Skill Discovery
+
+👉 Advanced Search
+
+👉 Tag-Based Filtering
+
+👉 Category Filtering
+
+👉 Server Functions
+
+👉 Zod Validation
+
+👉 Firebase Data Connect Integration
+
+👉 Responsive Design
+
+👉 Modern Dark UI
+
+👉 User Profiles
+
+👉 Saved Skills
+
+👉 Skill Detail Pages
+
+👉 Type-Safe End-to-End Architecture
+
+And much more.
+
+---
+
+## 🏗 Architecture
+
+```text
+Browser
+   ↓
+TanStack Router
+   ↓
+TanStack Query
+   ↓
+Server Functions
+   ↓
+Firebase Data Connect
+   ↓
+Cloud SQL PostgreSQL
+```
+
+### Form Submission Flow
+
+```text
+User Form
+   ↓
+Zod Validation
+   ↓
+Server Function
+   ↓
+Firebase Data Connect
+   ↓
+Database
+```
+
+---
+
+## 🤸 Quick Start
+
+### Prerequisites
+
+* Git
+* Node.js
+* npm
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/agentmart.git
+
+cd agentmart
+```
+
+### Install Dependencies
 
 ```bash
 npm install
+```
+
+### Environment Variables
+
+Create a `.env` file:
+
+```env
+FIREBASE_API_KEY=
+FIREBASE_AUTH_DOMAIN=
+FIREBASE_PROJECT_ID=
+FIREBASE_STORAGE_BUCKET=
+FIREBASE_MESSAGING_SENDER_ID=
+FIREBASE_APP_ID=
+```
+
+### Run Development Server
+
+```bash
 npm run dev
 ```
 
-# Building For Production
+Application runs on:
 
-To build this application for production:
-
-```bash
-npm run build
+```text
+http://localhost:3000
 ```
 
-## Testing
+---
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+## 🔐 Authentication
 
-```bash
-npm run test
+AgentMart uses Firebase Authentication for secure user authentication and session management.
+
+Features include:
+
+* Registration
+* Login
+* Logout
+* Protected Routes
+* User Sessions
+
+---
+
+## 📚 Skill Marketplace
+
+Users can:
+
+* Browse Skills
+* Search Skills
+* View Skill Details
+* Save Skills
+* Explore Categories
+
+Each skill contains:
+
+* Title
+* Description
+* Tags
+* Category
+* Install Command
+* Prompt Configuration
+* Author Information
+
+---
+
+## 🚀 Publishing Skills
+
+Authenticated users can publish new skills.
+
+Supported fields:
+
+```text
+Title
+Description
+Category
+Tags
+Install Command
+Prompt Configuration
+Readme Instructions
+Visibility
 ```
 
-## Styling
+All submissions are validated using Zod before reaching the database.
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+---
 
-### Removing Tailwind CSS
+## 🔍 Search & Discovery
 
-If you prefer not to use Tailwind CSS:
+Search supports:
 
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `npm install @tailwindcss/vite tailwindcss -D`
+* Skill Title
+* Description
+* Tags
+* Author Name
 
-## Linting & Formatting
+Filters:
 
-This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
+* Newest
+* Popular
+* Category
+* Saved Skills
 
+Pagination and filtering are handled server-side for maximum performance.
 
-```bash
-npm run lint
-npm run format
-npm run check
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── routes/
+├── components/
+├── hooks/
+├── services/
+├── server/
+├── lib/
+└── styles/
+
+dataconnect/
+├── schema/
+├── connectors/
+└── dataconnect.yaml
 ```
 
+---
 
-## Setting up Clerk
+## 🚀 Future Enhancements
 
-1. Sign up at [clerk.com](https://clerk.com) and create an application
-2. Copy the **Publishable Key** from the Clerk dashboard
-3. Set it in your `.env.local`:
-   ```bash
-   VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
-   ```
-4. Visit the demo route at `/demo/clerk` once `npm run dev` is running
+* Skill Ratings
+* Reviews
+* Skill Collections
+* Team Workspaces
+* AI Recommendations
+* Skill Analytics
+* Skill Versioning
 
-### What's wired up
+---
 
-- **`<ClerkProvider>`** at the app root (`src/integrations/clerk/provider.tsx`) handles auth context for the whole tree
-- **`<SignInButton>` / `<UserButton>`** in the header swap based on auth state
-- **`/demo/clerk`** shows Clerk's prebuilt sign-in UI and a signed-in greeting
+## 👨‍💻 Author
 
-### Protecting a route
-
-Wrap any component in `<SignedIn>` / `<SignedOut>`:
-
-```tsx
-import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'
-
-function ProtectedPage() {
-  return (
-    <>
-      <SignedIn>
-        <YourPageContent />
-      </SignedIn>
-      <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
-    </>
-  )
-}
-```
-
-For server-side checks (route loaders, server functions), see the Clerk docs on [`auth()`](https://clerk.com/docs/references/backend/auth).
-
-### Production checklist
-
-- Replace the test keys with **production keys** from a dedicated production Clerk instance
-- Configure your production domain under **Domains** in the Clerk dashboard
-- Set up social providers (Google, GitHub, etc.) under **User & Authentication → Social Connections**
-
-
-## Shadcn
-
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
-
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-
-
-## Routing
-
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+Built with ❤️ using TanStack Start, Firebase, TypeScript, and Tailwind CSS.
